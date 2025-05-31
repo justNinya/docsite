@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "Spielbergs Hoax - The Last Days Of The Big Lie - Eric Hunt May 2011.mp4",
     "The Majdanek Gas Chamber Myth - Eric Hunt 2014.mp4",
     "The Treblinka Archaeology Hoax - Eric Hunt 2014.mp4",
-    "The Treblinka 2 archaeology hoax - Eric Hunt.mp4"
+    "The Treblinka 2 archaeology hoax - Eric Hunt.mp4",
+    "FreePalestinegirl.mp4"
   ];
 
   const listContainer = document.getElementById("video-list");
