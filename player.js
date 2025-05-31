@@ -5,10 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
       id: "1WHVCSJdok2uc4zG4hDWIFZJdXaeweAnb"
     },
     {
-      name: "The Treblinka 2 archaeology hoax - Eric Hunt",
-      id: "1jzeCn09UYasPXiLocq6XpDct-TXpwTy-"
-    },
-    {
       name: "Questioning Why Part 1 - 25 April 2016 - Eric Hunt",
       id: "1HZMQiKXLLtb_C2-DO_TE1kpPx48cyaqG"
     },
