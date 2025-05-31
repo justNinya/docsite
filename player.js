@@ -1,36 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
   const videoFiles = [
-    "Questioning Why Part 1 - 25 April 2016 - Eric Hunt.mp4",
-    "Spielbergs Hoax - The Last Days Of The Big Lie - Eric Hunt May 2011.mp4",
-    "The Majdanek Gas Chamber Myth - Eric Hunt 2014.mp4",
-    "The Treblinka Archaeology Hoax - Eric Hunt 2014.mp4",  // <-- special case
-    "The Treblinka 2 archaeology hoax - Eric Hunt.mp4",
-    "FreePalestinegirl.mp4"
+    {
+      name: "The Treblinka Archaeology Hoax - Eric Hunt 2014",
+      id: "1WHVCSJdok2uc4zG4hDWIFZJdXaeweAnb"
+    },
+    {
+      name: "The Treblinka 2 archaeology hoax - Eric Hunt",
+      id: "1jzeCn09UYasPXiLocq6XpDct-TXpwTy-"
+    },
+    {
+      name: "Questioning Why Part 1 - 25 April 2016 - Eric Hunt",
+      id: "1HZMQiKXLLtb_C2-DO_TE1kpPx48cyaqG"
+    },
+    {
+      name: "The Majdanek Gas Chamber Myth - Eric Hunt 2014",
+      id: "1eYsO8M0S2EenNQLQDgi6jmkOFALc9j1A"
+    },
+    {
+      name: "Spielbergs Hoax - The Last Days Of The Big Lie - Eric Hunt May 2011",
+      id: "1dP838q_Zcq4qbeKcpZqMqSOAuOWpfDEy"
+    }
   ];
 
   const listContainer = document.getElementById("video-list");
   const playerContainer = document.getElementById("player-container");
-  const player = document.getElementById("custom-player");
+  const iframeWrapper = document.getElementById("iframe-wrapper");
   const closeBtn = document.getElementById("close-player");
 
-  // Google Drive ID for "The Treblinka Archaeology Hoax - Eric Hunt 2014.mp4"
-  const googleDriveId = "1WHVCSJdok2uc4zG4hDWIFZJdXaeweAnb";
-
-  // Add items to video list
-  videoFiles.forEach(filename => {
+  videoFiles.forEach(video => {
     const item = document.createElement("div");
     item.className = "video-item";
-    item.textContent = filename.replace(".mp4", "");
+    item.textContent = video.name;
 
     item.addEventListener("click", () => {
-      if (filename === "The Treblinka Archaeology Hoax - Eric Hunt 2014.mp4") {
-        // Use Google Drive embed link
-        player.src = `https://drive.google.com/uc?export=download&id=${googleDriveId}`;
-      } else {
-        // Use local videos folder
-        player.src = `videos/${encodeURIComponent(filename)}`;
-      }
-      player.load();
+      const embedURL = `https://drive.google.com/file/d/${video.id}/preview`;
+      iframeWrapper.innerHTML = `
+        <iframe 
+          src="${embedURL}" 
+          width="960" 
+          height="540" 
+          allow="autoplay" 
+          allowfullscreen>
+        </iframe>
+      `;
       playerContainer.classList.add("show");
     });
 
@@ -38,8 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   closeBtn.addEventListener("click", () => {
-    player.pause();
-    player.src = "";
+    iframeWrapper.innerHTML = "";
     playerContainer.classList.remove("show");
   });
 });
