@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flyers</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="layout-container">
+    <div class="main-content">
+      <header>
+        <h1>RED MEDIA</h1>
+      </header>
+      <nav>
+        <a href="../index.html">Documentaries</a>
+        <a href="index.html">Flyers</a>
+      </nav>
+      <div class="content-wrapper">
+        <div id="image-list"></div>
+        <div class="description-box">
+          <h2>About This Site</h2>
+          <p>
+            Red Media is an Archive of Documentaries people deem "racist, anti-semitic" or offensive.
+            Red Media doesn't archive fake news or misleading information. Any and all archives on this site are factual and well-founded.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Use the same overlay container but rename for clarity -->
+  <div id="image-overlay" class="hidden">
+    <div id="image-overlay-wrapper"></div>
+    <button id="close-image-overlay">✖ Close</button>
+  </div>
+
+  <script>
+    const images = [
+      { src: 'Flyer1remake.png', title: 'The slave trade was ran by the jews' },
+      { src: 'flyer2.png', title: 'Burning books' },
+      { src: 'Flyer3.png', title: 'The media is ran by jews' },
+    ];
+
+    const imageList = document.getElementById('image-list');
+    const overlay = document.getElementById('image-overlay');
+    const overlayWrapper = document.getElementById('image-overlay-wrapper');
+    const closeBtn = document.getElementById('close-image-overlay');
+
+    images.forEach(({ src, title }) => {
+      const imgEl = document.createElement('img');
+      imgEl.src = src;
+      imgEl.alt = title;
+      imgEl.title = title;
+      imgEl.className = 'flyer-thumb';
+      imgEl.tabIndex = 0; // focusable for accessibility
+      imgEl.style.userSelect = 'none';
+      imgEl.style.cursor = 'pointer';
+
+      imgEl.addEventListener('click', () => {
+        overlayWrapper.innerHTML = `<img src="${src}" alt="${title}" style="max-width:80vw; max-height:80vh; border: 2px solid var(--accent-red); border-radius:4px;" />`;
+        overlay.classList.add('show');
+      });
+
+      imageList.appendChild(imgEl);
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('show');
+      overlayWrapper.innerHTML = '';
+    });
+  </script>
+</body>
+</html>
