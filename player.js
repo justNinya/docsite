@@ -2,19 +2,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const videoFiles = [
     {
       name: "The Treblinka Archaeology Hoax - Eric Hunt 2014",
-      id: "1WHVCSJdok2uc4zG4hDWIFZJdXaeweAnb"
+      id: "1WHVCSJdok2uc4zG4hDWIFZJdXaeweAnb",
+      source: "drive"
     },
     {
       name: "Questioning Why Part 1 - 25 April 2016 - Eric Hunt",
-      id: "1HZMQiKXLLtb_C2-DO_TE1kpPx48cyaqG"
+      id: "1HZMQiKXLLtb_C2-DO_TE1kpPx48cyaqG",
+      source: "drive"
     },
     {
       name: "The Majdanek Gas Chamber Myth - Eric Hunt 2014",
-      id: "1eYsO8M0S2EenNQLQDgi6jmkOFALc9j1A"
+      id: "1eYsO8M0S2EenNQLQDgi6jmkOFALc9j1A",
+      source: "drive"
     },
     {
       name: "Spielbergs Hoax - The Last Days Of The Big Lie - Eric Hunt May 2011",
-      id: "1dP838q_Zcq4qbeKcpZqMqSOAuOWpfDEy"
+      id: "1dP838q_Zcq4qbeKcpZqMqSOAuOWpfDEy",
+      source: "drive"
+    },
+    {
+      name: "ADOLF HITLER THE GREATEST STORY NEVER TOLD! [2013] - DENNIS WISE (DOCUMENTARY VIDEO)",
+      id: "https://odysee.com/@AbeScott:b/ADOLF-HITLER-THE-GREATEST-STORY-NEVER-TOLD!--2013----DENNIS-WISE-%28DOCUMENTARY-VIDEO%29:d",
+      source: "odysee"
     }
   ];
 
@@ -29,7 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
     item.textContent = video.name;
 
     item.addEventListener("click", () => {
-      const embedURL = `https://drive.google.com/file/d/${video.id}/preview`;
+      let embedURL = "";
+
+      if (video.source === "drive") {
+        embedURL = `https://drive.google.com/file/d/${video.id}/preview`;
+      } else if (video.source === "odysee") {
+        embedURL = video.id;
+      }
+
       iframeWrapper.innerHTML = `
         <iframe 
           src="${embedURL}" 
