@@ -31,11 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
       source: "odysee"
     },
     {
-      name: "ADOLF HITLER THE GREATEST STORY NEVER TOLD! [2013] - DENNIS WISE (DOCUMENTARY VIDEO)",
-      id: "https://odysee.com/$/embed/@Mark78:3/white-women-forced-into-sex-slavery-by-jews-in-israel-scloudtomp3downloader.com:e",
-      source: "odysee"
-    },
-    {
       name: "Sex Slavery in Israel",
       id: "https://odysee.com/$/embed/@Mark78:3/white-women-forced-into-sex-slavery-by-jews-in-israel-scloudtomp3downloader.com:e",
       source: "odysee"
