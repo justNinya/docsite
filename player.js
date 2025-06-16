@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "ADOLF HITLER THE GREATEST STORY NEVER TOLD! [2013] - DENNIS WISE (DOCUMENTARY VIDEO)",
-      id: "https://odysee.com/@AbeScott:b/ADOLF-HITLER-THE-GREATEST-STORY-NEVER-TOLD!--2013----DENNIS-WISE-%28DOCUMENTARY-VIDEO%29:d",
+      id: "https://odysee.com/$/embed/@AbeScott:b/ADOLF-HITLER-THE-GREATEST-STORY-NEVER-TOLD!--2013----DENNIS-WISE-(DOCUMENTARY-VIDEO):d",
       source: "odysee"
     }
   ];
