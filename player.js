@@ -21,10 +21,31 @@ document.addEventListener("DOMContentLoaded", () => {
       source: "drive"
     },
     {
+      name: "Eric Hunt Analyzes The Holocaust 'Denial' Film",
+      id: "1Wk9cfxKt896n1x13XqvuXiOxgo9nVM96",
+      source: "drive"
+    },
+    {
       name: "ADOLF HITLER THE GREATEST STORY NEVER TOLD! [2013] - DENNIS WISE (DOCUMENTARY VIDEO)",
       id: "https://odysee.com/$/embed/@AbeScott:b/ADOLF-HITLER-THE-GREATEST-STORY-NEVER-TOLD!--2013----DENNIS-WISE-(DOCUMENTARY-VIDEO):d",
       source: "odysee"
+    },
+    {
+      name: "ADOLF HITLER THE GREATEST STORY NEVER TOLD! [2013] - DENNIS WISE (DOCUMENTARY VIDEO)",
+      id: "https://odysee.com/$/embed/@Mark78:3/white-women-forced-into-sex-slavery-by-jews-in-israel-scloudtomp3downloader.com:e",
+      source: "odysee"
+    },
+    {
+      name: "Sex Slavery in Israel",
+      id: "https://odysee.com/$/embed/@Mark78:3/white-women-forced-into-sex-slavery-by-jews-in-israel-scloudtomp3downloader.com:e",
+      source: "odysee"
+    },
+    {
+      name: "Occupied - by Stew Peters (Zionist Occupied Government ZOG)",
+      id: "https://odysee.com/$/embed/@AryanFascist:2/Occupied---Stew-Peters:e",
+      source: "odysee"
     }
+
   ];
 
   const listContainer = document.getElementById("video-list");
